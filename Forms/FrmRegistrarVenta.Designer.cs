@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtCodigoProducto = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtProducto = new System.Windows.Forms.MaskedTextBox();
             this.txtPagaCon = new System.Windows.Forms.MaskedTextBox();
             this.txtTotal = new System.Windows.Forms.MaskedTextBox();
@@ -50,64 +50,65 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtCodigoProducto
+            // txtCodigo
             // 
-            this.txtCodigoProducto.Location = new System.Drawing.Point(89, 99);
-            this.txtCodigoProducto.Name = "txtCodigoProducto";
-            this.txtCodigoProducto.Size = new System.Drawing.Size(100, 26);
-            this.txtCodigoProducto.TabIndex = 0;
-            this.txtCodigoProducto.TextChanged += new System.EventHandler(this.txtCodigoProducto_TextChanged);
+            this.txtCodigo.Location = new System.Drawing.Point(64, 95);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(114, 26);
+            this.txtCodigo.TabIndex = 0;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigoProducto_TextChanged);
             // 
             // txtProducto
             // 
-            this.txtProducto.Location = new System.Drawing.Point(219, 99);
+            this.txtProducto.Location = new System.Drawing.Point(199, 96);
             this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(100, 26);
+            this.txtProducto.Size = new System.Drawing.Size(114, 26);
             this.txtProducto.TabIndex = 1;
             // 
             // txtPagaCon
             // 
-            this.txtPagaCon.Location = new System.Drawing.Point(583, 99);
+            this.txtPagaCon.Location = new System.Drawing.Point(601, 95);
             this.txtPagaCon.Name = "txtPagaCon";
-            this.txtPagaCon.Size = new System.Drawing.Size(100, 26);
+            this.txtPagaCon.Size = new System.Drawing.Size(114, 26);
             this.txtPagaCon.TabIndex = 2;
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(458, 99);
+            this.txtTotal.Location = new System.Drawing.Point(481, 96);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(100, 26);
+            this.txtTotal.Size = new System.Drawing.Size(114, 26);
             this.txtTotal.TabIndex = 3;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(340, 99);
+            this.txtPrecio.Location = new System.Drawing.Point(336, 96);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(100, 26);
+            this.txtPrecio.Size = new System.Drawing.Size(114, 26);
             this.txtPrecio.TabIndex = 4;
             // 
             // txtCambio
             // 
-            this.txtCambio.Location = new System.Drawing.Point(689, 99);
+            this.txtCambio.Location = new System.Drawing.Point(740, 97);
             this.txtCambio.Name = "txtCambio";
-            this.txtCambio.Size = new System.Drawing.Size(100, 26);
+            this.txtCambio.Size = new System.Drawing.Size(114, 26);
             this.txtCambio.TabIndex = 6;
+            this.txtCambio.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtCambio_MaskInputRejected);
             // 
             // nudCantidad
             // 
-            this.nudCantidad.Location = new System.Drawing.Point(829, 100);
+            this.nudCantidad.Location = new System.Drawing.Point(880, 130);
             this.nudCantidad.Name = "nudCantidad";
-            this.nudCantidad.Size = new System.Drawing.Size(120, 26);
+            this.nudCantidad.Size = new System.Drawing.Size(134, 26);
             this.nudCantidad.TabIndex = 7;
             // 
             // dgvDetalles
             // 
             this.dgvDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetalles.Location = new System.Drawing.Point(219, 270);
+            this.dgvDetalles.Location = new System.Drawing.Point(32, 174);
             this.dgvDetalles.Name = "dgvDetalles";
             this.dgvDetalles.RowHeadersWidth = 62;
             this.dgvDetalles.RowTemplate.Height = 28;
-            this.dgvDetalles.Size = new System.Drawing.Size(568, 211);
+            this.dgvDetalles.Size = new System.Drawing.Size(982, 357);
             this.dgvDetalles.TabIndex = 8;
             this.dgvDetalles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalles_CellContentClick);
             // 
@@ -116,7 +117,7 @@
             this.btnBuscarProducto.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnBuscarProducto.IconColor = System.Drawing.Color.Black;
             this.btnBuscarProducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscarProducto.Location = new System.Drawing.Point(349, 561);
+            this.btnBuscarProducto.Location = new System.Drawing.Point(345, 575);
             this.btnBuscarProducto.Name = "btnBuscarProducto";
             this.btnBuscarProducto.Size = new System.Drawing.Size(223, 41);
             this.btnBuscarProducto.TabIndex = 9;
@@ -129,7 +130,7 @@
             this.btnAgregar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnAgregar.IconColor = System.Drawing.Color.Black;
             this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAgregar.Location = new System.Drawing.Point(650, 559);
+            this.btnAgregar.Location = new System.Drawing.Point(645, 574);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(137, 43);
             this.btnAgregar.TabIndex = 10;
@@ -198,7 +199,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(712, 63);
+            this.label6.Location = new System.Drawing.Point(731, 65);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 20);
             this.label6.TabIndex = 17;
@@ -207,7 +208,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(843, 63);
+            this.label7.Location = new System.Drawing.Point(896, 97);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 20);
             this.label7.TabIndex = 18;
@@ -215,8 +216,8 @@
             // 
             // FrmRegistrarVenta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1042, 671);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -235,7 +236,7 @@
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.txtPagaCon);
             this.Controls.Add(this.txtProducto);
-            this.Controls.Add(this.txtCodigoProducto);
+            this.Controls.Add(this.txtCodigo);
             this.Name = "FrmRegistrarVenta";
             this.Text = "FrmRegistrarVenta";
             this.Load += new System.EventHandler(this.FrmRegistrarVenta_Load);
@@ -248,7 +249,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtCodigoProducto;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.MaskedTextBox txtProducto;
         private System.Windows.Forms.MaskedTextBox txtPagaCon;
         private System.Windows.Forms.MaskedTextBox txtTotal;

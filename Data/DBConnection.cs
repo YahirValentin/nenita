@@ -9,17 +9,15 @@ namespace nenita.Data
 {
     internal class DBConnection
     {
-        private readonly string connectionString;
 
-        public DBConnection()
+        private static string cadenaConexion = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=db_CRUMAR;Integrated Security=True;";
+        public static SqlConnection ObtenerConexion()
         {
-            connectionString = @"Data Source=DEYDEY\SQLSERVERY;Initial Catalog=db_CRUMAR;Integrated Security=True";
+            return new SqlConnection(cadenaConexion);
         }
-
-        public SqlConnection GetConnection()
-        {
-            return new SqlConnection(connectionString);
-        }
-
     }
 }
+
+        
+
+

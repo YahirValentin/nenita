@@ -14,8 +14,7 @@ namespace nenita.Forms
 {
     public partial class FrmListaProductos : Form
     {
-
-        public Producto ProductoSeleccionado { get; private set; }
+        Producto ProductoSeleccionado { get;  set; }
 
         public FrmListaProductos()
         {
@@ -27,11 +26,7 @@ namespace nenita.Forms
         private void btnBuscar_Click(object sender, EventArgs e)
         {
 
-            string searchTerm = txtBuscar.Text.Trim();
-            var productoDAL = new ProductoDAL();
-            var productos = productoDAL.GetProductos(searchTerm);
-
-            dgvProductos.DataSource = productos;
+           
 
         }
 
